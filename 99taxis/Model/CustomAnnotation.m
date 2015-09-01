@@ -8,6 +8,10 @@
 
 #import "CustomAnnotation.h"
 
+@interface CustomAnnotation ()
+
+@end
+
 @implementation CustomAnnotation
 
 @end

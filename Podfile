@@ -4,7 +4,7 @@
 target '99taxis' do
 
 pod 'AFNetworking'
-pod 'ADClusterMapView'
+pod 'HACClusterMapViewController'
 pod 'Mantle'
 
 end

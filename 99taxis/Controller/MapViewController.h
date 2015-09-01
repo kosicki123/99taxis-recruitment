@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <HACClusterMapViewController.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : HACClusterMapViewController
 
 @end

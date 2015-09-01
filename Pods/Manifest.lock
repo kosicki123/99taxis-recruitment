@@ -1,5 +1,4 @@
 PODS:
-  - ADClusterMapView (1.1.0)
   - AFNetworking (2.6.0):
     - AFNetworking/NSURLConnection (= 2.6.0)
     - AFNetworking/NSURLSession (= 2.6.0)
@@ -21,18 +20,19 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - HACClusterMapViewController (1.0.1)
   - Mantle (2.0.4):
     - Mantle/extobjc (= 2.0.4)
   - Mantle/extobjc (2.0.4)
 
 DEPENDENCIES:
-  - ADClusterMapView
   - AFNetworking
+  - HACClusterMapViewController
   - Mantle
 
 SPEC CHECKSUMS:
-  ADClusterMapView: dfbaabc62ec929be8fbac1e86754af98baffb365
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  HACClusterMapViewController: 108ab86c6db0a59924a042e464810f2466dfb82c
   Mantle: 6bee68168423948be0c0c5924832bf3af188e099
 
 COCOAPODS: 0.38.2
