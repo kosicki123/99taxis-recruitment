@@ -7,9 +7,10 @@
 //
 
 #import "APIClient.h"
+#import <MapKit/MapKit.h>
 
 @interface DriverStore : APIClient
 
-+ (void)getDriversWithBlock:(ObjectCompletionBlock)block;
++ (void)getDriversIn:(CLLocationCoordinate2D)coordinate withCompletionBlock:(ObjectCompletionBlock)block;
 
 @end

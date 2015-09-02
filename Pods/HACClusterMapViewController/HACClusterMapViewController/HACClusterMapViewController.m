@@ -113,6 +113,7 @@
         }
     }
 }
+
 - (id<MKAnnotation>)annotationInGrid:(MKMapRect)gridMapRect usingAnnotations:(NSSet *)annotations {
     
     // first, see if one of the annotations we were already showing is in this mapRect

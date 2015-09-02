@@ -11,13 +11,20 @@
 #import "ModelConverter.h"
 #import "Environment.h"
 
+float const RangeLocation = 0.03;
+NSString * const GetDriversPath = @"lastLocations";
+
 @implementation DriverStore
 
 //Parameters:
 //- sw: Ponto extremo sul, extremo oeste do retângulo, no formato "latitude,longitude". Ex: -23.612474,-46.702746
 //- ne: Ponto extremo norte, extremo leste do retângulo, no formato "latitude,longitude". Ex: -23.589548,-46.673392
-+ (void)getDriversWithBlock:(ObjectCompletionBlock)block {
-    [[super sharedClient] GET:@"lastLocations" parameters:@{@"sw":@"-23.612474,-46.702746",@"ne":@"-23.589548,-46.673392"} success:^(NSURLSessionDataTask *task, id responseObject) {
+
++ (void)getDriversIn:(CLLocationCoordinate2D)coordinate withCompletionBlock:(ObjectCompletionBlock)block {
+    NSString *currentLocation = [NSString stringWithFormat:@"%f,%f",coordinate.latitude + RangeLocation, coordinate.longitude + RangeLocation];
+    NSString *newLocation = [NSString stringWithFormat:@"%f,%f",coordinate.latitude - RangeLocation, coordinate.longitude - RangeLocation];
+  
+    [[super sharedClient] GET:GetDriversPath parameters:@{@"sw": newLocation, @"ne": currentLocation} success:^(NSURLSessionDataTask *task, id responseObject) {
         NSArray *drivers = [ModelConverter convertModelsFromJSON:responseObject class:[Driver class]];
         
         if (block) block(drivers, nil);

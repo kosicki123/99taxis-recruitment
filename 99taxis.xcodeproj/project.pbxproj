@@ -10,6 +10,8 @@
 		164556281B9514F0006AC8BD /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 164556231B9514F0006AC8BD /* APIClient.m */; };
 		164556291B9514F0006AC8BD /* Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = 164556251B9514F0006AC8BD /* Environment.m */; };
 		1645562A1B9514F0006AC8BD /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 164556261B9514F0006AC8BD /* environment.plist */; };
+		1669DCFA1B9779DF0079B4C6 /* AnnotationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669DCF91B9779DF0079B4C6 /* AnnotationConverter.m */; settings = {ASSET_TAGS = (); }; };
+		1669DCFD1B977B7E0079B4C6 /* LocationRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 1669DCFC1B977B7E0079B4C6 /* LocationRequester.m */; settings = {ASSET_TAGS = (); }; };
 		16AE7B141B95055B0078A4B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AE7B131B95055B0078A4B7 /* main.m */; };
 		16AE7B171B95055B0078A4B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AE7B161B95055B0078A4B7 /* AppDelegate.m */; };
 		16AE7B1D1B95055B0078A4B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AE7B1B1B95055B0078A4B7 /* Main.storyboard */; };
@@ -41,6 +43,10 @@
 		164556241B9514F0006AC8BD /* Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
 		164556251B9514F0006AC8BD /* Environment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Environment.m; sourceTree = "<group>"; };
 		164556261B9514F0006AC8BD /* environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
+		1669DCF81B9779DF0079B4C6 /* AnnotationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnotationConverter.h; sourceTree = "<group>"; };
+		1669DCF91B9779DF0079B4C6 /* AnnotationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnotationConverter.m; sourceTree = "<group>"; };
+		1669DCFB1B977B7E0079B4C6 /* LocationRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationRequester.h; sourceTree = "<group>"; };
+		1669DCFC1B977B7E0079B4C6 /* LocationRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationRequester.m; sourceTree = "<group>"; };
 		16AE7B0E1B95055B0078A4B7 /* 99taxis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 99taxis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AE7B121B95055B0078A4B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16AE7B131B95055B0078A4B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -214,6 +220,10 @@
 			children = (
 				16E3EFEB1B9517C100A5762D /* ModelConverter.h */,
 				16E3EFEC1B9517C100A5762D /* ModelConverter.m */,
+				1669DCF81B9779DF0079B4C6 /* AnnotationConverter.h */,
+				1669DCF91B9779DF0079B4C6 /* AnnotationConverter.m */,
+				1669DCFB1B977B7E0079B4C6 /* LocationRequester.h */,
+				1669DCFC1B977B7E0079B4C6 /* LocationRequester.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -372,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1669DCFD1B977B7E0079B4C6 /* LocationRequester.m in Sources */,
 				16E3EFF01B9519BC00A5762D /* CustomAnnotation.m in Sources */,
 				164556281B9514F0006AC8BD /* APIClient.m in Sources */,
 				16E3EFE91B9515FB00A5762D /* DriverStore.m in Sources */,
@@ -381,6 +392,7 @@
 				16AE7B171B95055B0078A4B7 /* AppDelegate.m in Sources */,
 				16AE7B141B95055B0078A4B7 /* main.m in Sources */,
 				16E3EFE61B95140F00A5762D /* Driver.m in Sources */,
+				1669DCFA1B9779DF0079B4C6 /* AnnotationConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
