@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VMZ-M0-TOe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A278b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VMZ-M0-TOe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--99Taxis-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MapViewController" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HBv-x4-gjq">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HBv-x4-gjq">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <connections>
@@ -27,8 +27,14 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HBv-x4-gjq" secondAttribute="trailing" id="BhB-oz-Nvx"/>
+                            <constraint firstItem="HBv-x4-gjq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="EX1-at-qhM"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="HBv-x4-gjq" secondAttribute="bottom" id="MlP-Rt-3xC"/>
+                            <constraint firstItem="HBv-x4-gjq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="qls-dM-fAJ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Keb-bY-oL1"/>
+                    <navigationItem key="navigationItem" title="99Taxis" id="Keb-bY-oL1"/>
                     <connections>
                         <outlet property="mapView" destination="HBv-x4-gjq" id="gGE-jI-7zj"/>
                     </connections>
@@ -45,6 +51,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hC9-2V-75l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

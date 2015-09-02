@@ -20,6 +20,7 @@
 @property (weak, readonly, nonatomic) NSString *clusterPictoName; // abstract
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSArray *drivers;
+@property (assign, nonatomic) BOOL isFirstLaunch;
 
 @end
 
@@ -45,7 +46,7 @@
 - (void)setupMapView {
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
-
+    self.isFirstLaunch = YES;
     [self requestWhenInUseAuthorization];
 }
 
@@ -81,9 +82,11 @@
 
 - (void)enableMapMethods {
     [self.locationManager startUpdatingLocation];
-    self.mapView.showsUserLocation = YES;
     
+    self.mapView.showsUserLocation = YES;
+
     [self updateDrivers];
+    [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(updateDrivers) userInfo:nil repeats:YES];
 }
 
 - (void)updateDrivers {
@@ -129,6 +132,19 @@
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
         [self enableMapMethods];
+    }
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    if (self.isFirstLaunch) {
+        self.isFirstLaunch = NO;
+        MKCoordinateRegion mapRegion;
+        
+        mapRegion.center = self.mapView.userLocation.coordinate;
+        mapRegion.span.latitudeDelta = 0.2;
+        mapRegion.span.longitudeDelta = 0.2;
+        
+        [self.mapView setRegion:mapRegion animated: YES];
     }
 }
 
